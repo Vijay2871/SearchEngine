@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="runner.TestRunner" tests="1" skipped="0" failures="0" errors="0" timestamp="2022-08-16T22:44:16" hostname="IT306586" time="13.505">
+<testsuite name="runner.TestRunner" tests="2" skipped="0" failures="0" errors="0" timestamp="2023-02-10T20:27:48" hostname="LAPTOP-BN8E26I5" time="30.828">
   <properties/>
-  <testcase name="Registered user sees the dashboard" classname="runner.TestRunner" time="13.505"/>
+  <testcase name="User must have to see the keyword search result #1" classname="runner.TestRunner" time="20.447"/>
+  <testcase name="User must have to see the keyword search result #2" classname="runner.TestRunner" time="10.38"/>
   <system-out><![CDATA[
-@SignIn
-Scenario: Registered user sees the dashboard ?[90m# src/test/resources/features/SignIn.feature:4?[0m
-  ?[32mGiven ?[0m?[32mI login as a registered user?[0m         ?[90m# steps.signInSteps.i_login_as_a_registered_user()?[0m
+@Smoke
+Scenario Outline: User must have to see the keyword search result ?[90m# src/test/resources/features/SearchEngine.feature:11?[0m
+  ?[32mGiven ?[0m?[32mI launched the browser?[0m                                    ?[90m# steps.signInSteps.iLaunchedTheBrowser()?[0m
+  ?[32mWhen ?[0m?[32mI search the ?[0m?[32m?[1m"SoftwareTesting"?[0m                             ?[90m# steps.signInSteps.iSearchThe(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI get the wikipedia results for the ?[0m?[32m?[1m"SoftwareTesting"?[0m      ?[90m# steps.signInSteps.iGetTheWikipediaResultsForThe(java.lang.String)?[0m
+
+@Smoke
+Scenario Outline: User must have to see the keyword search result ?[90m# src/test/resources/features/SearchEngine.feature:12?[0m
+  ?[32mGiven ?[0m?[32mI launched the browser?[0m                                    ?[90m# steps.signInSteps.iLaunchedTheBrowser()?[0m
+  ?[32mWhen ?[0m?[32mI search the ?[0m?[32m?[1m"NZ FLAG"?[0m                                     ?[90m# steps.signInSteps.iSearchThe(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI get the wikipedia results for the ?[0m?[32m?[1m"NZ FLAG"?[0m              ?[90m# steps.signInSteps.iGetTheWikipediaResultsForThe(java.lang.String)?[0m
 ]]></system-out>
-  <system-err><![CDATA[Starting ChromeDriver 104.0.5112.79 (3cf3e8c8a07d104b9e1260c910efb8f383285dc5-refs/branch-heads/5112@{#1307}) on port 56682
+  <system-err><![CDATA[Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 65481
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-Aug 17, 2022 10:44:19 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+[1676060871.385][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Feb 11, 2023 9:27:51 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected upstream dialect: W3C
-Aug 17, 2022 10:44:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-WARNING: Unable to find an exact match for CDP version 104, so returning the closest version found: 103
-Aug 17, 2022 10:44:19 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
-INFO: Found CDP implementation for version 104 of 103
+Feb 11, 2023 9:27:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: a no-op implementation
+Feb 11, 2023 9:27:51 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 110.
+Feb 11, 2023 9:27:51 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.3.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
+Starting ChromeDriver 110.0.5481.77 (65ed616c6e8ee3fe0ad64fe83796c020644d42af-refs/branch-heads/5481@{#839}) on port 54611
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+[1676060890.271][WARNING]: virtual void DevToolsClientImpl::AddListener(DevToolsEventListener *) subscribing a listener to the already connected DevToolsClient. Connection notification will not arrive.
+Feb 11, 2023 9:28:10 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected upstream dialect: W3C
+Feb 11, 2023 9:28:10 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+WARNING: Unable to find an exact match for CDP version 110, so returning the closest version found: a no-op implementation
+Feb 11, 2023 9:28:10 AM org.openqa.selenium.devtools.CdpVersionFinder findNearestMatch
+INFO: Unable to find CDP implementation matching 110.
+Feb 11, 2023 9:28:10 AM org.openqa.selenium.chromium.ChromiumDriver lambda$new$3
+WARNING: Unable to find version of CDP to use for . You may need to include a dependency on a specific version of the CDP using something similar to `org.seleniumhq.selenium:selenium-devtools-v86:4.3.0` where the version ("v86") matches the version of the chromium-based browser you're using and the version number of the artifact is the same as Selenium's.
 ?[32m?[1m??????????????????????????????????????????????????????????????????????????????????????[0m
 ?[32m?[1m??[0m Share your Cucumber Report with your team at ?[36m?[1m?[4mhttps://reports.cucumber.io?[0m          ?[32m?[1m??[0m
 ?[32m?[1m??[0m Activate publishing with one of the following:                                    ?[32m?[1m??[0m
