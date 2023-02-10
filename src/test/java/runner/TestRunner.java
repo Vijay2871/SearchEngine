@@ -9,5 +9,5 @@ import org.junit.runner.RunWith;
     plugin = {"pretty", "json:target/site/serenity/cucumber/report.json"},
     features = "src/test/resources/features/",
     glue = "steps",
-    tags = "@SignIn")
+    tags = "@Smoke")
 public class TestRunner {}
